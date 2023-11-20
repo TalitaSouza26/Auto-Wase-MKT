@@ -16,13 +16,14 @@
   box-sizing: border-box;
 }
 
-.section__container {
+/* TODOS OS CONTAINERS */
+.section-container {
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 1rem;
-
 }
 
+/* porque nossos produto é essencial ? */
 .section__header {
   position: relative;
   padding-bottom: 0.5rem;
@@ -30,6 +31,7 @@
   font-size: 2rem;
   font-weight: 400;
   color: var(--text-dark);
+
 }
 
 .section__header::after {
@@ -61,18 +63,18 @@
   background-color: var(--primary-color-dark);
 }
 
+/* todas as img */
 img {
   display: flex;
   width: 100%;
+
 }
 
-.imgBox {
-  border-radius: 10px 70px 10px 70px;
-}
-
+/* todos os links */
 a {
   text-decoration: none;
   white-space: nowrap;
+ 
 }
 
 html,
@@ -86,6 +88,7 @@ body {
 
 .header {
   background-color: var(--secondary-color);
+  
 }
 
 nav {
@@ -93,6 +96,7 @@ nav {
   isolation: isolate;
   width: 100%;
   z-index: 9;
+ 
 }
 
 .nav-header {
@@ -104,20 +108,18 @@ nav {
   background-color: var(--secondary-color);
 }
 
-.nav__logo a {
+.nav-logo a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-dark);
-}
-
-.nav__logo img {
-  max-width: 40px;
+  
 }
 
 .ul-links {
+
   position: absolute;
   top: 68px;
   left: 0;
@@ -133,6 +135,13 @@ nav {
   transition: 0.5s;
   z-index: -1;
   transform: translateY(-100%);
+
+  
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--text-dark);
 }
 
 .ul-links.open {
@@ -157,6 +166,7 @@ nav {
 .header__image img {
   max-width: 500px;
   margin: auto;
+ 
 }
 
 .header__content h4 {
@@ -187,7 +197,7 @@ nav {
 .about__grid {
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   justify-content: center;
   width: 100%;
   gap: 2rem;
@@ -258,7 +268,6 @@ nav {
   color: var(--text-light);
 }
 
-.class__content>a:hover {}
 
 .class__content {
   flex: 1;
@@ -461,6 +470,7 @@ nav {
 }
 
 @media (width > 480px) {
+
   .class__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem 1rem;
@@ -497,11 +507,14 @@ nav {
     gap: 2rem;
   }
 
+  .nav__menu__btn {
+    display: none;
+  }
+
   .nav-header {
     padding: 0;
     background-color: transparent;
   }
-
 
   .ul-links {
     position: static;
@@ -509,6 +522,7 @@ nav {
     flex-direction: row;
     background-color: transparent;
     transform: none;
+    
   }
 
   .header__container {
@@ -530,6 +544,7 @@ nav {
   .about__grid {
     gap: 3rem;
     display: grid;
+      grid-template-columns: repeat(3, 1fr);
   }
 
   .class__grid {
@@ -562,6 +577,7 @@ nav {
 }
 
 @media (width > 1024px) {
+
   .class__grid {
     gap: 2rem;
   }
