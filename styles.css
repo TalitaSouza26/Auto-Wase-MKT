@@ -12,10 +12,12 @@
   --max-width: 1200px;
 }
 
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  list-style-type: none;
 }
 
 /* TODOS OS CONTAINERS */
@@ -28,7 +30,7 @@
 /* CABEÇALHO */
 
 .header {
-  background-color: var(--secondary-color);
+  background-color: var(--white);
 
 }
 
@@ -37,7 +39,6 @@ nav {
   isolation: isolate;
   width: 100%;
   z-index: 9;
-
 
 }
 
@@ -94,17 +95,23 @@ nav {
 .link a {
   color: var(--text-dark);
   font-size: 20px;
+
 }
 
 .link a:hover {
   color: var(--primary-color);
 }
 
+#demofree, #fale  {
+  color: var(--white);
+}
+
+
 .btn {
-  padding: 0.75rem 1.5rem;
+  padding: 8px;
   outline: none;
   border: none;
-  font-size: 1rem;
+  font-size: 12px;
   white-space: nowrap;
   color: var(--white);
   background-color: var(--text-dark);
@@ -130,16 +137,19 @@ nav {
   font-size: 2.5rem;
   font-weight: 400;
   color: var(--text-dark);
+  display: none;
 }
 
 .header-descricao-introducao .section-header {
-  font-size: 3.5rem;
+  font-size: 3.4rem;
   font-weight: 700;
+  display: none;
 }
 
 .header-descricao-introducao p {
   margin-bottom: 2rem;
   color: var(--text-light);
+  display: none;
 }
 
 /* HEADER INTRODUCAO */
@@ -209,7 +219,14 @@ body {
 img {
   display: flex;
   width: 100%;
+}
 
+.phoneSistem{
+   display: none;
+}
+
+.imgIntroducao{
+  display: flex;
 }
 
 hr {
@@ -433,7 +450,7 @@ hr {
   justify-content: space-around;
   align-items: center;
   width: 70vw;
-  
+
 }
 
 .demo-container {
@@ -443,6 +460,8 @@ hr {
  flex-direction: column;
  font-family: 'Palanquin Dark', sans-serif;
  border-radius: 20px;
+ background-image: url(./assets/rm378-03.jpg);
+  background-size: cover;
 
 }
 
@@ -664,14 +683,26 @@ input:focus {
        display: flex;
        justify-content: space-around;
        align-items: center;
-       background: radial-gradient(circle at 50% 50%, #09163e 20%, #000);
+       background: radial-gradient(circle at 50% 50%, #425c6c 20%, #577081);
        border-radius: 10px 100px; 
+       background-image: url(./assets/rm378-03.jpg);
+       background-size: cover;
 
+
+  }
+
+  .cardLoginDemo{
+  background: transparent;
+    /* Cor de fundo com opacidade para efeito de vidro */
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
 
  .demo-container {
-    background: radial-gradient(circle at 50% 50%, #09163e 20%, #00000021);
+ background: radial-gradient(circle at 50% 50%, #425c6c 20%, #00000021);
     display:flex;
    border-radius: 20px; 
 
@@ -688,7 +719,26 @@ input:focus {
   .xpFreenone{
     display: none;
   }
+    
+  .imgIntroducao{
+    display: none;
+  }
 
+  .phoneSistem{
+    display: block;
+  }
+
+  .header-descricao-introducao .section-header{
+    display: flex;
+  }
+  .header-descricao-introducao p {
+    display: flex;
+  }
+
+  .btn{
+    padding: 12px;
+    font-size: 18px;
+  }
 
 }
 
@@ -736,7 +786,9 @@ input:focus {
   }
 
   .segmento-container {
+    display:grid;
     grid-template-columns: repeat(2, 1fr);
+    border:  solid darkgreen;
     align-items: center;
   }
 
@@ -744,7 +796,9 @@ input:focus {
     gap: 3rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
   }
+
 
   .box-card-funcionalidade {
     grid-template-columns: repeat(4, 1fr);
@@ -806,4 +860,22 @@ input:focus {
     display: none;
   }
 
+}
+
+@media (width < 750px){
+  
+  .imgIntroducao{
+    display: block;
+  }
+
+  .phoneSistem{
+    display: none;
+  }
+
+  .header-descricao-introducao .section-header{
+    display: none;
+  }
+  .header-descricao-introducao p {
+    display: none;
+  }
 }
