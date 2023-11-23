@@ -185,7 +185,7 @@ nav {
 }
 
 .btn:hover {
-  background-color: var(--primary-color-dark);
+  background-color: var(--primary-color);
 }
 
 .radiusImg {
@@ -496,8 +496,8 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: solid 1px rgba(255, 255, 255, 0.501);
-  padding: 30px 50px 50px;
+  border: solid 1px rgba(255, 255, 255, 0.235);
+  padding: 30px;
   border-radius: 20px;
 }
 
@@ -579,14 +579,23 @@ input:focus {
 
 /* FINAL */
 
+.seguranca{
+  max-width: 300px;
+  height: 170px;
+}
+
 .footer {
   background-color: var(--secondary-color);
 }
 
 .footer-container {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
+
 
 .footer-logo a {
   margin-bottom: 1.5rem;
@@ -624,6 +633,7 @@ input:focus {
 .footer-redesSocial a:hover {
   color: var(--primary-color);
   border-color: var(--primary-color);
+  scale: 1.2;
 }
 
 .footer-box h4 {
@@ -675,6 +685,7 @@ input:focus {
 
   .footer-container {
     grid-template-columns: 2fr 1fr;
+    
   }
 
   .demofree-container {
@@ -696,6 +707,7 @@ input:focus {
     padding: 20px;
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(10px);
+    padding: 50px;
   }
 
 
@@ -844,6 +856,8 @@ input:focus {
     padding: 2rem;
   }
 
+
+
 }
 
 @media (width < 1024px) {
@@ -860,6 +874,10 @@ input:focus {
     display: none;
   }
 
+  .titledemo{
+    display: none;
+  }
+  
 }
 
 @media (width < 750px) {
