@@ -258,7 +258,7 @@ hr {
 }
 
 .segmento-card span {
-  padding: 11px 20px;
+  padding: 11px 15px;
   font-size: 2rem;
   color: var(--primary-color-dark);
   border: 2px solid var(--primary-color-dark);
@@ -788,7 +788,7 @@ input:focus {
   }
 
   .segmento-container {
-
+    margin-top: 60px;
     grid-template-columns: repeat(2, 1fr);
 
   }
